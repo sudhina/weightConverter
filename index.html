@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,inital-scale=1.0">
+			<meta http-equiv="X-UA-Compatiable" content="ie-edge">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjUZyc3z8GV/NPeZWAv56rSmLIdC3R/AZzGRnGxQQKnKKoFVhFQhNUwEy]" crossorigin="anonymous">
+				<title>Weight converter</title>
+	 <style>
+	  body{
+	  	margin-top:70px; 
+	  	background: #333;
+	  	color:#FFF;
+	  	  }
+	  	 </style>
+</head>
+	<body>
+		<div class="container">
+		 <div class="row">
+		 	<div class="col-md-6 offset-md-3">
+		 		<h1 class="display-3 text-center">Weight Converter</h1>
+		 			<form>
+		 				<div class="form-group">
+		 					<input type="number" id="IbsInput"  class="form-control form-control-lg" placeholder="Enter pounds...">
+		 				</div> 
+		 			</form>
+		 			<div id="output">
+		 				<div class="card card-primary mb-2">
+		 					<div class="card-block">
+		 						<h4>Grams:</h4>
+		 						<div id="gramsoutput"></div>
+
+		 					</div>
+		 				</div>
+		 			
+		 			<div class="card card card-success mb-2">
+		 					<div class="card-block">
+		 						<div id="kgoutput"></div>
+		 						<h4>kilograms:</h4>
+		 					
+
+		 					</div>
+		 				</div>
+		 		
+		 			<div class="card card-danger mb-2">
+		 					<div class="card-block">
+		 						<h4>ounces:</h4>
+		 						<div id="ozoutput"></div>
+
+		 					</div>
+		 				</div>
+		 			</div>
+		 		</div>
+		 	</div>
+		 </div>
+		
+<script>
+document.getElementById('output').style.visibilty='hidden';
+	document.getElementById('IbsInput').addEventListener('input',
+		function(e)
+		{
+
+		document.getElementById('output').style.visibilty='visible';
+		let lbs=e.target.value;
+		document.getElementById('gramsoutput').innerHTML=lbs/0.0022046;
+		document.getElementById('kgoutput').innerHTML=lbs/2.2046;
+		document.getElementById('ozoutput').innerHTML=lbs*16;
+		
+	});
+	
+</script>
+
+</body>
+</html>
